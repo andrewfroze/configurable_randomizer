@@ -86,7 +86,9 @@ public class FullscreenJFrame extends JFrame implements KeyListener {
         } else if (e.getKeyCode() == KeyEvent.VK_T) {
             PropertyReader.saveProperties();
         } else if (e.getKeyCode() == KeyEvent.VK_1) {
-            START_FONT_SIZE -= 1;
+            if (START_FONT_SIZE > 0) {
+                START_FONT_SIZE -= 1;
+            }
             label.setFontIndex(((double) START_WIDTH) / START_FONT_SIZE);
             label.repaint();
         } else if (e.getKeyCode() == KeyEvent.VK_2) {
@@ -100,6 +102,7 @@ public class FullscreenJFrame extends JFrame implements KeyListener {
         TEXT_X_POSITION = Double.parseDouble(properties.getProperty("TEXT_X_POSITION", "0"));
         TEXT_Y_POSITION = Double.parseDouble(properties.getProperty("TEXT_Y_POSITION", "0"));
         START_FONT_SIZE = Integer.parseInt(properties.getProperty("FONT_SIZE", "25"));
+        label.setFontIndex(((double) START_WIDTH) / START_FONT_SIZE);
         label.repaint();
     }
 
