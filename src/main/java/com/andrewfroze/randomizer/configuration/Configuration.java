@@ -16,7 +16,7 @@ public class Configuration {
     public static final int START_HEIGHT = 400;
 
     //style
-    public static final String PATH_TO_BACKGROUND_IMAGE = properties.getProperty("PATH_TO_BACKGROUND_IMAGE", "src/resources/background.png");
+    public static final String PATH_TO_BACKGROUND_IMAGE = properties.getProperty("PATH_TO_BACKGROUND_IMAGE", "src/main/resources/background.png");
 
     //text
     public static final String TWO_VARIABLES_TEXT_PATTERN = properties.getProperty("TWO_VARIABLES_TEXT_PATTERN", "Row: %s  /  Place: %s");

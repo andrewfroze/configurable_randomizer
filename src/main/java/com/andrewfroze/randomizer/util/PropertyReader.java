@@ -10,6 +10,11 @@ public class PropertyReader {
     public static Properties properties = new Properties();
 
     static {
+        try {
+            new File(PROPERTIES_PATH).createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         try (InputStream input = new FileInputStream(PROPERTIES_PATH)) {
             properties.load(input);
         } catch (IOException e) {
