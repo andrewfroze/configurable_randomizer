@@ -19,7 +19,7 @@ public class Configuration {
     public static final String PATH_TO_BACKGROUND_IMAGE = properties.getProperty("PATH_TO_BACKGROUND_IMAGE", "src/main/resources/background.png");
 
     //text
-    public static final String TWO_VARIABLES_TEXT_PATTERN = properties.getProperty("TWO_VARIABLES_TEXT_PATTERN", "Row: %s  /  Place: %s");
+    public static final String TWO_VARIABLES_TEXT_PATTERN = properties.getProperty("TWO_VARIABLES_TEXT_PATTERN", "Ряд: %s  /  Место: %s");
     public static final String PLACEHOLDER = properties.getProperty("PLACEHOLDER", "   ");
     public static final boolean ADD_ZERO_FOR_SINGLE_SIGNED_NUMBERS = Boolean.parseBoolean(properties.getProperty("ADD_ZERO_FOR_SINGLE_SIGNED_NUMBERS", "true"));
 
